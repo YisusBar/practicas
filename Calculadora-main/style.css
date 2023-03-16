@@ -1,0 +1,124 @@
+#container{
+    height: 500px;
+    width: 800px;
+    position: relative;
+    float: left;
+    margin-left: 22%;
+    background-color: rgb(28, 40, 210);
+}
+
+#screen{
+    background-color: rgb(197, 203, 30);
+    position: relative;
+    float: left;
+    height: 100px;
+    width: 90%;
+    margin-top: 50px;
+    margin-left: 42px;
+
+}
+
+#bottoncontainer{
+    margin-left: 41px;
+    margin-top: 44px;
+    position: relative;
+    border: solid;
+    float: left;
+    border-style: solid;
+    border-width: 1px;
+    height: 58%;
+    width: 90%;
+    background-color: rgb(208, 38, 106);
+}
+
+.bton{
+    background-color: blueviolet;
+    margin: 20px;
+    position: relative;
+    float: left;
+    width: 30%;
+    height: 20%;
+}
+
+.bn{
+    background-color: gray;
+    position: relative;
+    margin: -254px 195px 44px 483px;
+    width: 30px;
+    height: 20px;
+}
+
+.bn2{
+    background-color: gray;
+    position: relative;
+    margin: -254px 132px 44px 483px;
+    width: 30px;
+    height: 20px;
+}
+
+.bn3{
+    background-color: gray;
+    position: relative;
+    margin: -254px 70px 44px 483px;
+    width: 30px;
+    height: 20px;
+}
+
+.bn4{
+    background-color: gray;
+    position: relative;
+    margin: -176px 195px 44px 483px;
+    width: 30px;
+    height: 20px;
+}
+
+.bn5{
+    background-color: gray;
+    position: relative;
+    margin: -176px 132px 44px 483px;
+    width: 30px;
+    height: 20px;
+}
+
+.bn6{
+    background-color: gray;
+    position: relative;
+    margin: -176px 70px 44px 483px;
+    width: 30px;
+    height: 20px;
+}
+
+.bn7{
+    background-color: gray;
+    position: relative;
+    margin: -98px 195px 44px 483px;
+    width: 30px;
+    height: 20px;
+}
+
+.bn8{
+    background-color: gray;
+    position: relative;
+    margin: -98px 132px 44px 483px;
+    width: 30px;
+    height: 20px;
+}
+
+.bn9{
+    background-color: gray;
+    position: relative;
+    margin: -98px 70px 44px 483px;
+    width: 30px;
+    height: 20px;
+}
+
+
+
+.bn0{
+    background-color: gray;
+    position: relative;
+    margin: -35px 132px 44px 483px;
+    width: 30px;
+    height: 20px;
+}
+

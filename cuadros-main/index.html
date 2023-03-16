@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Esta es una funcion para ocultar un div
+        function showDiv(){
+            //console.log("ocultar D:");
+            const div2 = document.getElementById("div2");
+
+            if(div2.style.display === "none"){
+                div2.style.display ="block";
+            }else{
+                div2.style.display ="none";
+            }
+            console.log("fin");
+        }
+        //Esta funcion no tiene nad que ver con la de arriba, es aparte
+        //es independiente, ya no vive con sus papas
+        // esta es una funcion para cambiar el color 
+        function changeColor(){
+        console.log("Change color");
+        const myconst = 3;
+        let nombreDeMivariable;
+        //var var2;
+
+        const div1 = document.getElementById("div1");
+        div1.style.backgroundColor="green";
+
+        }
+
+        function changeColor(){
+        console.log("Change color");
+        
+    
+
+        const div1 = document.getElementById("div1");
+        div1.style.backgroundColor="red";
+
+        }
+    </script>
+    <style>
+        #div1{
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            float: left;
+            position: relative;
+        }
+        #div2{
+            background-color: orange;
+            height: 100px;
+            width: 100px;
+            float: left;
+            position: relative;
+        }
+        #div3{
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+            float: left;
+            position: relative;
+        }
+        #div4{
+            background-color: greenyellow;
+            height: 200px;
+            width: 200px;
+            float: left;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4">
+        <button onclick="changeColor()" id="button1">click me!</button>
+        <button onclick="showDiv()" id="button2">hidden div</button>
+        <button onclick="changeColor()" id="button1">click me!> </button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+#container{
+    height: 500px;
+    width: 1520px;
+    position: relative;
+    float: left;
+    margin-left: 0;
+    background-color: rgb(40, 102, 210);
+}
+.screen{
+    border-color: black;
+    border-style: solid;
+    position: relative;
+    float: left;
+    height: 495px;
+    width: 33%;
+    margin-top: 0;
+    margin-left: 0;
+}
+.screen2{
+    border-color: black;
+    border-style: solid;
+    position: relative;
+    float: left;
+    height: 495px;
+    width: 33%;
+    margin-top: 0;
+    margin-left: 0;
+}
+.screen3{
+    border-color: black;
+    border-style: solid;
+    position: relative;
+    float: left;
+    height: 495px;
+    width: 30%;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.r1{
+    border-color: black;
+    border-style: solid;
+    height: 184px;
+    width: 331px;
+    background-color: rgb(255, 0, 0);
+    margin: -32px 72px;
+    float: left;
+    box-shadow: 9px 6px 8px 5px rgba(81, 81, 81, 0.986);
+    
+}
+
+.r2{
+    border-color: black;
+    border-style: solid;
+    height: 184px;
+    width: 331px;
+    background-color: rgb(223, 180, 10);
+    margin: -32px 72px;
+    float: left;
+    box-shadow: 9px 6px 8px 5px rgba(81, 81, 81, 0.986);
+}
+
+
+.r3{
+    border-color: black;
+    border-style: solid;
+    height: 184px;
+    width: 331px;
+    background-color: rgb(16, 116, 11);
+    margin: -32px 72px;
+    float: left;
+    box-shadow: 9px 6px 8px 5px rgba(81, 81, 81, 0.986);
+}
+
+.r1 h1{
+    margin: 70px 133px;
+}
+
+.r2 h1{
+    margin: 70px 133px;
+}
+
+.r3 h1{
+    margin: 70px 133px;
+}
+
+.screen h2{
+    margin: 118px 220px;
+}
+
+.screen2 h2{
+    margin: 118px 220px;
+}
+
+.screen3 h2{
+    margin: 118px 220px;
+}
