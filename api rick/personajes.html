@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/boostrap.min.css" rel="stylesheet">
+ 
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active"              href="episodios.html">Episodios</a>
+              <a class="nav-link"                     href="Personajes.html">Personajes</a>
+              <a class="nav-link"                     href="Lugares.html">lugares</a>
+              <button onclick=""></button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <div class="container text-center">
+        
+        <div class="row">
+            <h1>Characters</h1>
+          <div class="col">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Planet</th>
+                    <th scope="col">Dimension</th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody">    
+                  <!-- <tr>
+                    <th scope="row">1</th>
+                    <td>Pilot</td>
+                    <td>December 2, 2013</td>
+                    <td>
+                        <button type="button" class="btn btn-info">Info</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Citadel of Ricks</td>
+                    <td>December 12, 2013</td>
+                    <td>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Info
+                          </button>
+                    </td>
+                  </tr> -->              
+                </tbody>
+              </table>
+          </div>
+          
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">More information</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h2>Details</h2>
+              <div class="card" style="width: 18rem;" id="CardComponent"> 
+                <!-- <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Id: </li>
+                  <li class="list-group-item">Name: </li>
+                  <li class="list-group-item">Air date: </li>
+                  <li class="list-group-item">Episode: </li>
+                </ul> -->               
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+
+var requestOptions = {
+  method: 'GET',
+  redirect: 'follow'
+};
+
+fetch("https://rickandmortyapi.com/api/character/", requestOptions)
+  .then(response => response.text())
+  .then((result) => {
+    console.log(result);
+    var datos = JSON.parse(result);
+    
+    datos.results.map((item)=> {
+        
+        document.getElementById("tableBody").innerHTML += `
+                <tr>
+                    <th scope="row">`+item.id+`</th>
+                    <td>`+item.name+`</td>
+                    <td>`+item.status+`</td>
+                    <td>
+                        <button onclick="getEpisodieDetails(`+item.id+`)" type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Details
+                          </button>
+                    </td>
+                </tr>
+        `;
+    });
+    
+  
+    })
+  .catch(error => console.log('error', error));
+      </script>
+
+      <script>
+
+        function getEpisodieDetails(id){
+
+          var requestOptions = {
+          method: 'GET',
+          redirect: 'follow'
+          };          
+          _url = "https://rickandmortyapi.com/api/character/"+id;
+          fetch(_url, requestOptions)
+            .then(response => response.text())
+            .then((result) => {
+              var datos = JSON.parse(result);
+              debugger;
+              console.log(result);
+              document.getElementById("CardComponent").innerHTML = `
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Name: `+datos.name+` </li>
+                  <li class="list-group-item">Type:`+datos.status+` </li>
+                  <li class="list-group-item">Dimension:`+datos.species+` </li>
+                  <img src="`+datos.image+`" class="card-img-top" alt="...">
+                </ul>
+              
+              `;
+            
+            })
+            .catch(error => console.log('error', error));          
+        }
+
+
+      </script>
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
